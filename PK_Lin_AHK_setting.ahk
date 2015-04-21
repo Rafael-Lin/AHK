@@ -11,9 +11,8 @@ http://etc.usf.edu/lit2go/
 dropbox_path = %USERPROFILE%\Dropbox
 google_drive_path = %USERPROFILE%\Google Drive
 desktop_path = %USERPROFILE%\Desktop
-vim_path = %USERPROFILE%\Dropbox\2012-10-31_vim\Final\Vim\Vim73\gvim.exe 
-FS_path = %USERPROFILE%\Dropbox\Software\FSCapture.exe
-weekly_report_path = E:\WeeklyReport\
+/* vim_path = %USERPROFILE%\Dropbox\2012-10-31_vim\Final\Vim\Vim73\gvim.exe */ 
+vim_path = D:\Vim74\Vim\vim74\gvim - original.exe
 hi_touch_path= E:\proj - hiTouch_Designer
 
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
@@ -40,22 +39,21 @@ openOnePath( path )
 	^!2::
 		run %A_AppData%
 		return
-
+		/*
 	^!h::MouseMove, -20,0,0,
 	^!l::MouseMove, 20,0,0,R
 	^!j::MouseMove, 0,20,0,R
 	^!k::MouseMove, 0,-20,0,R
 	^!a::Send {Click down}
 	^!x::Send {Click}
+	*/
 
 	^!t::
 	Send %theDate%
 	return 
 	^!w::
-	openOnePath( weekly_report_path )
 	return 
 	^!q::
-	openOnePath( hi_touch_path )
 	return 
 
 	^!v::
@@ -70,15 +68,8 @@ openOnePath( path )
 	openOnePath( desktop_path )
 	return
 
-	^!r::
-	Run %windir%\explorer.exe ftp://10.240.34.119/Rafael/Release/
-	Run %windir%\explorer.exe ftp://10.240.34.119/0.Touch Team/FAE/HiTouch Designer/test/
-	Run E:\proj - hiTouch_Designer\Release
-	return ;
-
-
 	^!m::Run C:\Windows\System32\Shutdown.exe -s -t 00
-	^!f::Run %windir%\explorer.exe ftp://10.240.34.119/
+	/* ^!f::Run %windir%\explorer.exe ftp://10.240.34.119/ */
 	^!1::Send {Enter}
 
 	^!e::Run E:\
@@ -184,15 +175,9 @@ this_id := id%A_Index%
 
 ::btw::bye the way
 ::lativ::http://www.lativ.com.tw/
-::hitouch::e:\proj - hiTouch_Designer
-::music::e:\music
 ::int_ap::E:\proj - hiTouch_Designer\IntegratedAP_v3.1.1\Debug\AP Tool.exe
 ::oldreg::E:\proj - old_Reg_Tool\HX8526-A Register_20110905\bin\Debug\HX8520-A Register.exe
-::ging::ftp://10.240.34.119/Ging
-::publish::ftp://10.240.34.119/Rafael/publish/
 
 ::kwa::kwang997@gmail.com
-::D122::D122026495
-::qet::qetyrw
 ::wee::E:\weeklyreport
 
