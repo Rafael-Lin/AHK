@@ -1,19 +1,8 @@
-﻿/*
-   wait to follow links.
-http://code.google.com/p/ydict/downloads/list
-http://blog.longwin.com.tw/2010/06/y_dictionary_script_2010/
-http://www.vim.org/scripts/script.php?script_id=2001
-
-english free audio books
-http://etc.usf.edu/lit2go/
- */
-
-dropbox_path = %USERPROFILE%\Dropbox
-google_drive_path = %USERPROFILE%\Google Drive
+﻿
+;dropbox_path = %USERPROFILE%\Dropbox
+;google_drive_path = %USERPROFILE%\Google Drive
 desktop_path = %USERPROFILE%\Desktop
-/* vim_path = %USERPROFILE%\Dropbox\2012-10-31_vim\Final\Vim\Vim73\gvim.exe */ 
-vim_path = D:\Vim74\Vim\vim74\gvim - original.exe
-hi_touch_path= E:\proj - hiTouch_Designer
+vim_path = "D:\Vim74\Vim\vim74\gvim - original.exe"
 
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
@@ -39,14 +28,6 @@ openOnePath( path )
 	^!2::
 		run %A_AppData%
 		return
-		/*
-	^!h::MouseMove, -20,0,0,
-	^!l::MouseMove, 20,0,0,R
-	^!j::MouseMove, 0,20,0,R
-	^!k::MouseMove, 0,-20,0,R
-	^!a::Send {Click down}
-	^!x::Send {Click}
-	*/
 
 	^!t::
 	Send %theDate%
@@ -61,7 +42,7 @@ openOnePath( path )
 	return
 
 	^!d::
-	openOnePath( dropbox_path )
+	;openOnePath( dropbox_path )
 	return
 
 	^!s::
@@ -69,7 +50,6 @@ openOnePath( path )
 	return
 
 	^!m::Run C:\Windows\System32\Shutdown.exe -s -t 00
-	/* ^!f::Run %windir%\explorer.exe ftp://10.240.34.119/ */
 	^!1::Send {Enter}
 
 	^!e::Run E:\
@@ -175,9 +155,5 @@ this_id := id%A_Index%
 
 ::btw::bye the way
 ::lativ::http://www.lativ.com.tw/
-::int_ap::E:\proj - hiTouch_Designer\IntegratedAP_v3.1.1\Debug\AP Tool.exe
-::oldreg::E:\proj - old_Reg_Tool\HX8526-A Register_20110905\bin\Debug\HX8520-A Register.exe
-
 ::kwa::kwang997@gmail.com
-::wee::E:\weeklyreport
 
