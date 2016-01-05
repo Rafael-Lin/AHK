@@ -1,12 +1,9 @@
-﻿dropbox_path       = %USERPROFILE%\Dropbox
-google_drive_path  = %USERPROFILE%\"Google Drive"
-desktop_path       = %USERPROFILE%\Desktop
-vim_path           = %USERPROFILE%\Dropbox\2012-10-31_vim\Vim74\Vim\vim74\gvim.exe
-FS_path            = %USERPROFILE%\Dropbox\Software\FSCapture.exe
-weekly_report_path = "E:\WeeklyReport\"
-hi_touch_path      = "E:\proj_hiTouch_Designer\hi_touch\hi_git_repository\"
-release_path       = "E:\proj_hiTouch_Designer\Release"
-touch_path         = "ftp://10.240.42.80/"
+;dropbox_path = %USERPROFILE%\Dropbox
+;google_drive_path = %USERPROFILE%\Google Drive
+desktop_path = %USERPROFILE%\Desktop
+vim_path = "D:\Vim74\Vim\vim74\gvim - original.exe"
+
+>>>>>>> c61cb9daf868d800669241392b850b6c738ddf41
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 
@@ -31,6 +28,7 @@ openOnePath( path )
 }
 
 {
+<<<<<<< HEAD
 	; ctrl + alt for mouse ;^代表Ctrl鍵 ;! 代表Alt鍵
 	^!a::Send {Click down}
 	^!x::Send {Click}
@@ -62,6 +60,33 @@ openOnePath( path )
 	; ^!f:: openOnePath( touch_path )
 	 ;^!f::Run %windir%\explorer.exe ftp://10.240.34.119/
 	 ;^!f::Run %windir%\explorer.exe ftp://10.240.42.80/
+=======
+	^!2::
+		run %A_AppData%
+		return
+
+	^!t::
+	Send %theDate%
+	return 
+	^!w::
+	return 
+	^!q::
+	return 
+
+	^!v::
+	openOnePath( vim_path )
+	return
+
+	^!d::
+	;openOnePath( dropbox_path )
+	return
+
+	^!s::
+	openOnePath( desktop_path )
+	return
+
+	^!m::Run C:\Windows\System32\Shutdown.exe -s -t 00
+>>>>>>> c61cb9daf868d800669241392b850b6c738ddf41
 	^!1::Send {Enter}
 
 }
@@ -116,21 +141,5 @@ openOnePath( path )
 }
 
 ::btw::bye the way
-::hi_touch::E:\proj_hiTouch_Designer\hi_touch\hi_git_repository\
-;::hid_fx2::E:\proj_hiTouch_Designer\hid_fx2 - normal\
-::hid_fx2::E:\mycode\hid_fx2 - normal
-;::common_fx2::E:\proj_hiTouch_Designer\common_fx2\2013-10-14_SVN_commonFX2\
-::common_fx2::E:\mycode\common_fx2\2013-10-14_SVN_commonFX2\
-::driver_::C:\Users\Pei-Kuan\Dropbox\code\driver
-::music::E:\private\tmpMusic
-
+::lativ::http://www.lativ.com.tw/
 ::kwa::kwang997@gmail.com
-::D122::D122026495
-::qet::qetyrw
-::wee::E:\weeklyreport
-::dropbox::%USERPROFILE%\Dropbox
-::dl_::E:\DownloadFiles
-::ftp_::ftp://10.240.34.88/
-::sl_::E:\Software
-::vim_::C:\Users\Pei-Kuan\Dropbox\2012-10-31_vim\Vim74\Vim\vim74
-::bcb_::E:\myCode\BCB-siliconlab-AP\HIDKomponente\DEMOS\BCB\ReadWriteDemo_2014-02-05
